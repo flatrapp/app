@@ -29619,6 +29619,158 @@ var _evancz$url_parser$UrlParser$intParam = function (name) {
 	return A2(_evancz$url_parser$UrlParser$customParam, name, _evancz$url_parser$UrlParser$intParamHelp);
 };
 
+var _rundis$elm_bootstrap$Bootstrap_Badge$roleOption = function (role) {
+	var _p0 = role;
+	switch (_p0.ctor) {
+		case 'Default':
+			return 'badge-default';
+		case 'Primary':
+			return 'badge-primary';
+		case 'Success':
+			return 'badge-success';
+		case 'Info':
+			return 'badge-info';
+		case 'Warning':
+			return 'badge-warning';
+		default:
+			return 'badge-danger';
+	}
+};
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeClass = function (option) {
+	return _elm_lang$html$Html_Attributes$class(
+		function () {
+			var _p1 = option;
+			if (_p1.ctor === 'Pill') {
+				return 'badge-pill';
+			} else {
+				return _rundis$elm_bootstrap$Bootstrap_Badge$roleOption(_p1._0);
+			}
+		}());
+};
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeAttributes = function (options) {
+	return {
+		ctor: '::',
+		_0: _elm_lang$html$Html_Attributes$class('badge'),
+		_1: A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Badge$badgeClass, options)
+	};
+};
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal = F3(
+	function (options, attributes, children) {
+		return A2(
+			_elm_lang$html$Html$span,
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_rundis$elm_bootstrap$Bootstrap_Badge$badgeAttributes(options),
+				attributes),
+			children);
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$Danger = {ctor: 'Danger'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Warning = {ctor: 'Warning'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Info = {ctor: 'Info'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Success = {ctor: 'Success'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Primary = {ctor: 'Primary'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Default = {ctor: 'Default'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Pill = {ctor: 'Pill'};
+var _rundis$elm_bootstrap$Bootstrap_Badge$Roled = function (a) {
+	return {ctor: 'Roled', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Badge$badge = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Default),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgePrimary = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Primary),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeSuccess = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Success),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeInfo = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Info),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeWarning = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Warning),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$badgeDanger = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Danger),
+		_1: {ctor: '[]'}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pill = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Default),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pillPrimary = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Primary),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pillSuccess = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Success),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pillInfo = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Info),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pillWarning = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Warning),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Badge$pillDanger = _rundis$elm_bootstrap$Bootstrap_Badge$badgeInternal(
+	{
+		ctor: '::',
+		_0: _rundis$elm_bootstrap$Bootstrap_Badge$Roled(_rundis$elm_bootstrap$Bootstrap_Badge$Danger),
+		_1: {
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Badge$Pill,
+			_1: {ctor: '[]'}
+		}
+	});
+
 var _rundis$elm_bootstrap$Bootstrap_Grid_Internal$horizontalAlignOption = function (align) {
 	var _p0 = align;
 	switch (_p0.ctor) {
@@ -30686,6 +30838,1010 @@ var _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Right = {ctor: 'Right'};
 var _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Center = {ctor: 'Center'};
 var _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Left = {ctor: 'Left'};
 
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$textAlignDirOption = function (dir) {
+	var _p0 = dir;
+	switch (_p0.ctor) {
+		case 'Center':
+			return 'center';
+		case 'Left':
+			return 'left';
+		default:
+			return 'right';
+	}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$textAlignClass = function (_p1) {
+	var _p2 = _p1;
+	return _elm_lang$html$Html_Attributes$class(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			'text',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				A2(
+					_elm_lang$core$Maybe$withDefault,
+					'-',
+					A2(
+						_elm_lang$core$Maybe$map,
+						function (s) {
+							return A2(
+								_elm_lang$core$Basics_ops['++'],
+								'-',
+								A2(_elm_lang$core$Basics_ops['++'], s, '-'));
+						},
+						_rundis$elm_bootstrap$Bootstrap_Grid_Internal$screenSizeOption(_p2.size))),
+				_rundis$elm_bootstrap$Bootstrap_Internal_Text$textAlignDirOption(_p2.dir))));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$HAlign = F2(
+	function (a, b) {
+		return {dir: a, size: b};
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$Right = {ctor: 'Right'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$Center = {ctor: 'Center'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Text$Left = {ctor: 'Left'};
+
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXl = function (dir) {
+	return {dir: dir, size: _rundis$elm_bootstrap$Bootstrap_Grid_Internal$XL};
+};
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXlRight = _rundis$elm_bootstrap$Bootstrap_Text$alignXl(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Right);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXlCenter = _rundis$elm_bootstrap$Bootstrap_Text$alignXl(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Center);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXlLeft = _rundis$elm_bootstrap$Bootstrap_Text$alignXl(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Left);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignLg = function (dir) {
+	return {dir: dir, size: _rundis$elm_bootstrap$Bootstrap_Grid_Internal$LG};
+};
+var _rundis$elm_bootstrap$Bootstrap_Text$alignLgRight = _rundis$elm_bootstrap$Bootstrap_Text$alignLg(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Right);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignLgCenter = _rundis$elm_bootstrap$Bootstrap_Text$alignLg(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Center);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignLgLeft = _rundis$elm_bootstrap$Bootstrap_Text$alignLg(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Left);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignMd = function (dir) {
+	return {dir: dir, size: _rundis$elm_bootstrap$Bootstrap_Grid_Internal$MD};
+};
+var _rundis$elm_bootstrap$Bootstrap_Text$alignMdRight = _rundis$elm_bootstrap$Bootstrap_Text$alignMd(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Right);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignMdCenter = _rundis$elm_bootstrap$Bootstrap_Text$alignMd(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Center);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignMdLeft = _rundis$elm_bootstrap$Bootstrap_Text$alignMd(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Left);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignSm = function (dir) {
+	return {dir: dir, size: _rundis$elm_bootstrap$Bootstrap_Grid_Internal$SM};
+};
+var _rundis$elm_bootstrap$Bootstrap_Text$alignSmRight = _rundis$elm_bootstrap$Bootstrap_Text$alignSm(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Right);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignSmCenter = _rundis$elm_bootstrap$Bootstrap_Text$alignSm(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Center);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignSmLeft = _rundis$elm_bootstrap$Bootstrap_Text$alignSm(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Left);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXs = function (dir) {
+	return {dir: dir, size: _rundis$elm_bootstrap$Bootstrap_Grid_Internal$XS};
+};
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXsRight = _rundis$elm_bootstrap$Bootstrap_Text$alignXs(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Right);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXsCenter = _rundis$elm_bootstrap$Bootstrap_Text$alignXs(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Center);
+var _rundis$elm_bootstrap$Bootstrap_Text$alignXsLeft = _rundis$elm_bootstrap$Bootstrap_Text$alignXs(_rundis$elm_bootstrap$Bootstrap_Internal_Text$Left);
+
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$roleClass = function (role) {
+	return _elm_lang$html$Html_Attributes$class(
+		function () {
+			var _p0 = role;
+			switch (_p0.ctor) {
+				case 'Success':
+					return 'list-group-item-success';
+				case 'Info':
+					return 'list-group-item-info';
+				case 'Warning':
+					return 'list-group-item-warning';
+				default:
+					return 'list-group-item-danger';
+			}
+		}());
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$itemAttributes = function (options) {
+	return A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$classList(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'list-group-item', _1: true},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'disabled', _1: options.disabled},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'active', _1: options.active},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'list-group-item-action', _1: options.action},
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$disabled(options.disabled),
+				_1: {ctor: '[]'}
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				A2(
+					_elm_lang$core$Maybe$withDefault,
+					{ctor: '[]'},
+					A2(
+						_elm_lang$core$Maybe$map,
+						function (r) {
+							return {
+								ctor: '::',
+								_0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$roleClass(r),
+								_1: {ctor: '[]'}
+							};
+						},
+						options.role)),
+				options.attributes)));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$preventClick = A2(_elm_lang$html$Html_Attributes$attribute, 'onclick', 'var event = arguments[0] || window.event; event.preventDefault();');
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$applyModifier = F2(
+	function (modifier, options) {
+		var _p1 = modifier;
+		switch (_p1.ctor) {
+			case 'Roled':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{
+						role: _elm_lang$core$Maybe$Just(_p1._0)
+					});
+			case 'Action':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{action: true});
+			case 'Disabled':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{disabled: true});
+			case 'Active':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{active: true});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{
+						attributes: A2(_elm_lang$core$Basics_ops['++'], options.attributes, _p1._0)
+					});
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$defaultOptions = {
+	role: _elm_lang$core$Maybe$Nothing,
+	active: false,
+	disabled: false,
+	action: false,
+	attributes: {ctor: '[]'}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderCustomItem = function (_p2) {
+	var _p3 = _p2;
+	return A2(
+		_p3._0.itemFn,
+		_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$itemAttributes(
+			A3(_elm_lang$core$List$foldl, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$applyModifier, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$defaultOptions, _p3._0.options)),
+		_p3._0.children);
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderItem = function (_p4) {
+	var _p5 = _p4;
+	return A2(
+		_p5._0.itemFn,
+		_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$itemAttributes(
+			A3(_elm_lang$core$List$foldl, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$applyModifier, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$defaultOptions, _p5._0.options)),
+		_p5._0.children);
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$ItemOptions = F5(
+	function (a, b, c, d, e) {
+		return {role: a, active: b, disabled: c, action: d, attributes: e};
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Attrs = function (a) {
+	return {ctor: 'Attrs', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Action = {ctor: 'Action'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Disabled = {ctor: 'Disabled'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Active = {ctor: 'Active'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Roled = function (a) {
+	return {ctor: 'Roled', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Danger = {ctor: 'Danger'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Warning = {ctor: 'Warning'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Info = {ctor: 'Info'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Success = {ctor: 'Success'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Item = function (a) {
+	return {ctor: 'Item', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$CustomItem = function (a) {
+	return {ctor: 'CustomItem', _0: a};
+};
+
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$attrs = function (attrs) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Attrs(attrs);
+};
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$disabled = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Disabled;
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$active = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Active;
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$danger = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Danger);
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$warning = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Warning);
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$info = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Info);
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$success = _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Success);
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$button = F2(
+	function (options, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$CustomItem(
+			{
+				itemFn: _elm_lang$html$Html$button,
+				children: children,
+				options: {
+					ctor: '::',
+					_0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Action,
+					_1: A2(
+						_elm_lang$core$Basics_ops['++'],
+						options,
+						{
+							ctor: '::',
+							_0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Attrs(
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$type_('button'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						})
+				}
+			});
+	});
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$anchor = F2(
+	function (options, children) {
+		var updOptions = A2(
+			_elm_lang$core$List$any,
+			F2(
+				function (x, y) {
+					return _elm_lang$core$Native_Utils.eq(x, y);
+				})(_rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Disabled),
+			options) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			options,
+			{
+				ctor: '::',
+				_0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Attrs(
+					{
+						ctor: '::',
+						_0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$preventClick,
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}) : options;
+		return _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$CustomItem(
+			{
+				itemFn: _elm_lang$html$Html$a,
+				children: children,
+				options: {ctor: '::', _0: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Action, _1: updOptions}
+			});
+	});
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$keyedCustom = function (items) {
+	return A3(
+		_elm_lang$html$Html_Keyed$node,
+		'div',
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$List$map,
+			function (_p0) {
+				var _p1 = _p0;
+				return {
+					ctor: '_Tuple2',
+					_0: _p1._0,
+					_1: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderCustomItem(_p1._1)
+				};
+			},
+			items));
+};
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$custom = function (items) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderCustomItem, items));
+};
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$li = F2(
+	function (options, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$Item(
+			{itemFn: _elm_lang$html$Html$li, children: children, options: options});
+	});
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$keyedUl = function (keyedItems) {
+	return A2(
+		_elm_lang$html$Html_Keyed$ul,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$List$map,
+			function (_p2) {
+				var _p3 = _p2;
+				return {
+					ctor: '_Tuple2',
+					_0: _p3._0,
+					_1: _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderItem(_p3._1)
+				};
+			},
+			keyedItems));
+};
+var _rundis$elm_bootstrap$Bootstrap_ListGroup$ul = function (items) {
+	return A2(
+		_elm_lang$html$Html$ul,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderItem, items));
+};
+
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$toRGBString = function (color) {
+	var _p0 = _elm_lang$core$Color$toRgb(color);
+	var red = _p0.red;
+	var green = _p0.green;
+	var blue = _p0.blue;
+	return A2(
+		_elm_lang$core$Basics_ops['++'],
+		'RGB(',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(red),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				',',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(green),
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						',',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							_elm_lang$core$Basics$toString(blue),
+							')'))))));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$roleOption = function (role) {
+	var _p1 = role;
+	switch (_p1.ctor) {
+		case 'Primary':
+			return 'primary';
+		case 'Success':
+			return 'success';
+		case 'Info':
+			return 'info';
+		case 'Warning':
+			return 'warning';
+		default:
+			return 'danger';
+	}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$applyModifier = F2(
+	function (option, options) {
+		var _p2 = option;
+		switch (_p2.ctor) {
+			case 'Aligned':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{
+						aligned: _elm_lang$core$Maybe$Just(_p2._0)
+					});
+			case 'Coloring':
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{
+						coloring: _elm_lang$core$Maybe$Just(_p2._0)
+					});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					options,
+					{
+						attributes: A2(_elm_lang$core$Basics_ops['++'], options.attributes, _p2._0)
+					});
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$defaultOptions = {
+	aligned: _elm_lang$core$Maybe$Nothing,
+	coloring: _elm_lang$core$Maybe$Nothing,
+	attributes: {ctor: '[]'}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$cardAttributes = function (modifiers) {
+	var options = A3(_elm_lang$core$List$foldl, _rundis$elm_bootstrap$Bootstrap_Internal_Card$applyModifier, _rundis$elm_bootstrap$Bootstrap_Internal_Card$defaultOptions, modifiers);
+	return A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('card'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			function () {
+				var _p3 = options.coloring;
+				if (_p3.ctor === 'Just') {
+					switch (_p3._0.ctor) {
+						case 'Roled':
+							return {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class(
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										'card-inverse card-',
+										_rundis$elm_bootstrap$Bootstrap_Internal_Card$roleOption(_p3._0._0))),
+								_1: {ctor: '[]'}
+							};
+						case 'Outlined':
+							return {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class(
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										'card-outline-',
+										_rundis$elm_bootstrap$Bootstrap_Internal_Card$roleOption(_p3._0._0))),
+								_1: {ctor: '[]'}
+							};
+						default:
+							var _p4 = _p3._0._0;
+							return {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('card-inverse'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'background-color',
+												_1: _rundis$elm_bootstrap$Bootstrap_Internal_Card$toRGBString(_p4)
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'border-color',
+													_1: _rundis$elm_bootstrap$Bootstrap_Internal_Card$toRGBString(_p4)
+												},
+												_1: {ctor: '[]'}
+											}
+										}),
+									_1: {ctor: '[]'}
+								}
+							};
+					}
+				} else {
+					return {ctor: '[]'};
+				}
+			}(),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				function () {
+					var _p5 = options.aligned;
+					if (_p5.ctor === 'Just') {
+						return {
+							ctor: '::',
+							_0: _rundis$elm_bootstrap$Bootstrap_Internal_Text$textAlignClass(_p5._0),
+							_1: {ctor: '[]'}
+						};
+					} else {
+						return {ctor: '[]'};
+					}
+				}(),
+				options.attributes)));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$applyBlockModifier = F2(
+	function (option, options) {
+		var _p6 = option;
+		if (_p6.ctor === 'AlignedBlock') {
+			return _elm_lang$core$Native_Utils.update(
+				options,
+				{
+					aligned: _elm_lang$core$Maybe$Just(_p6._0)
+				});
+		} else {
+			return _elm_lang$core$Native_Utils.update(
+				options,
+				{
+					attributes: A2(_elm_lang$core$Basics_ops['++'], options.attributes, _p6._0)
+				});
+		}
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$defaultBlockOptions = {
+	aligned: _elm_lang$core$Maybe$Nothing,
+	attributes: {ctor: '[]'}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$blockAttributes = function (modifiers) {
+	var options = A3(_elm_lang$core$List$foldl, _rundis$elm_bootstrap$Bootstrap_Internal_Card$applyBlockModifier, _rundis$elm_bootstrap$Bootstrap_Internal_Card$defaultBlockOptions, modifiers);
+	return A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('card-block'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			function () {
+				var _p7 = options.aligned;
+				if (_p7.ctor === 'Just') {
+					return {
+						ctor: '::',
+						_0: _rundis$elm_bootstrap$Bootstrap_Internal_Text$textAlignClass(_p7._0),
+						_1: {ctor: '[]'}
+					};
+				} else {
+					return {ctor: '[]'};
+				}
+			}(),
+			options.attributes));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$renderBlock = function (block) {
+	var _p8 = block;
+	if (_p8.ctor === 'CardBlock') {
+		return _p8._0;
+	} else {
+		return _p8._0;
+	}
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$renderBlocks = function (blocks) {
+	return A2(
+		_elm_lang$core$List$map,
+		function (block) {
+			var _p9 = block;
+			if (_p9.ctor === 'CardBlock') {
+				return _p9._0;
+			} else {
+				return _p9._0;
+			}
+		},
+		blocks);
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$CardOptions = F3(
+	function (a, b, c) {
+		return {aligned: a, coloring: b, attributes: c};
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockOptions = F2(
+	function (a, b) {
+		return {aligned: a, attributes: b};
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Attrs = function (a) {
+	return {ctor: 'Attrs', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring = function (a) {
+	return {ctor: 'Coloring', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Aligned = function (a) {
+	return {ctor: 'Aligned', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Inverted = function (a) {
+	return {ctor: 'Inverted', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined = function (a) {
+	return {ctor: 'Outlined', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled = function (a) {
+	return {ctor: 'Roled', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Danger = {ctor: 'Danger'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Warning = {ctor: 'Warning'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Info = {ctor: 'Info'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Success = {ctor: 'Success'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$Primary = {ctor: 'Primary'};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockAttrs = function (a) {
+	return {ctor: 'BlockAttrs', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$AlignedBlock = function (a) {
+	return {ctor: 'AlignedBlock', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$ListGroup = function (a) {
+	return {ctor: 'ListGroup', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$listGroup = function (items) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$ListGroup(
+		A2(
+			_elm_lang$html$Html$ul,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('list-group list-group-flush'),
+				_1: {ctor: '[]'}
+			},
+			A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Internal_ListGroup$renderItem, items)));
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$CardBlock = function (a) {
+	return {ctor: 'CardBlock', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$block = F2(
+	function (options, items) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_Card$CardBlock(
+			A2(
+				_elm_lang$html$Html$div,
+				_rundis$elm_bootstrap$Bootstrap_Internal_Card$blockAttributes(options),
+				A2(
+					_elm_lang$core$List$map,
+					function (_p10) {
+						var _p11 = _p10;
+						return _p11._0;
+					},
+					items)));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem = function (a) {
+	return {ctor: 'BlockItem', _0: a};
+};
+
+var _rundis$elm_bootstrap$Bootstrap_Card$title = F3(
+	function (elemFn, attributes, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem(
+			A2(
+				elemFn,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('card-title'),
+					_1: attributes
+				},
+				children));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH6 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h6);
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH5 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h5);
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH4 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h4);
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH3 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h3);
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH2 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h2);
+var _rundis$elm_bootstrap$Bootstrap_Card$titleH1 = _rundis$elm_bootstrap$Bootstrap_Card$title(_elm_lang$html$Html$h1);
+var _rundis$elm_bootstrap$Bootstrap_Card$blockQuote = F2(
+	function (attributes, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem(
+			A2(
+				_elm_lang$html$Html$blockquote,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('card-blockquote'),
+						_1: {ctor: '[]'}
+					},
+					attributes),
+				children));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$custom = function (element) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem(element);
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$text = F2(
+	function (attributes, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem(
+			A2(
+				_elm_lang$html$Html$p,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('card-text'),
+						_1: {ctor: '[]'}
+					},
+					attributes),
+				children));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$link = F2(
+	function (attributes, children) {
+		return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockItem(
+			A2(
+				_elm_lang$html$Html$a,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('card-link'),
+						_1: {ctor: '[]'}
+					},
+					attributes),
+				children));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$blockAttrs = function (attrs) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$BlockAttrs(attrs);
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$blockAlign = function (align) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$AlignedBlock(align);
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$view = function (_p0) {
+	var _p1 = _p0;
+	return A2(
+		_elm_lang$html$Html$div,
+		_rundis$elm_bootstrap$Bootstrap_Internal_Card$cardAttributes(_p1._0.options),
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			A2(
+				_elm_lang$core$List$filterMap,
+				_elm_lang$core$Basics$identity,
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$core$Maybe$map,
+						function (_p2) {
+							var _p3 = _p2;
+							return _p3._0;
+						},
+						_p1._0.header),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$core$Maybe$map,
+							function (_p4) {
+								var _p5 = _p4;
+								return _p5._0;
+							},
+							_p1._0.imgTop),
+						_1: {ctor: '[]'}
+					}
+				}),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_rundis$elm_bootstrap$Bootstrap_Internal_Card$renderBlocks(_p1._0.blocks),
+				A2(
+					_elm_lang$core$List$filterMap,
+					_elm_lang$core$Basics$identity,
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$core$Maybe$map,
+							function (_p6) {
+								var _p7 = _p6;
+								return _p7._0;
+							},
+							_p1._0.footer),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$core$Maybe$map,
+								function (_p8) {
+									var _p9 = _p8;
+									return _p9._0;
+								},
+								_p1._0.imgBottom),
+							_1: {ctor: '[]'}
+						}
+					}))));
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$group = function (cards) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('card-group'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Card$view, cards));
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$deck = function (cards) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('card-deck'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Card$view, cards));
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$columns = function (cards) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('card-columns'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _rundis$elm_bootstrap$Bootstrap_Card$view, cards));
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$keyedMulti = F2(
+	function (clazz, keyedCards) {
+		return A3(
+			_elm_lang$html$Html_Keyed$node,
+			'div',
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class(clazz),
+				_1: {ctor: '[]'}
+			},
+			A2(
+				_elm_lang$core$List$map,
+				function (_p10) {
+					var _p11 = _p10;
+					return {
+						ctor: '_Tuple2',
+						_0: _p11._0,
+						_1: _rundis$elm_bootstrap$Bootstrap_Card$view(_p11._1)
+					};
+				},
+				keyedCards));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$keyedGroup = _rundis$elm_bootstrap$Bootstrap_Card$keyedMulti('card-group');
+var _rundis$elm_bootstrap$Bootstrap_Card$keyedDeck = _rundis$elm_bootstrap$Bootstrap_Card$keyedMulti('card-deck');
+var _rundis$elm_bootstrap$Bootstrap_Card$keyedColumns = _rundis$elm_bootstrap$Bootstrap_Card$keyedMulti('card-columns');
+var _rundis$elm_bootstrap$Bootstrap_Card$attrs = function (attrs) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$Attrs(attrs);
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$inverted = function (color) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+		_rundis$elm_bootstrap$Bootstrap_Internal_Card$Inverted(color));
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$outlineDanger = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Danger));
+var _rundis$elm_bootstrap$Bootstrap_Card$outlineWarning = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Warning));
+var _rundis$elm_bootstrap$Bootstrap_Card$outlineInfo = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Info));
+var _rundis$elm_bootstrap$Bootstrap_Card$outlineSuccess = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Success));
+var _rundis$elm_bootstrap$Bootstrap_Card$outlinePrimary = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Outlined(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Primary));
+var _rundis$elm_bootstrap$Bootstrap_Card$danger = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Danger));
+var _rundis$elm_bootstrap$Bootstrap_Card$warning = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Warning));
+var _rundis$elm_bootstrap$Bootstrap_Card$info = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Info));
+var _rundis$elm_bootstrap$Bootstrap_Card$success = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Success));
+var _rundis$elm_bootstrap$Bootstrap_Card$primary = _rundis$elm_bootstrap$Bootstrap_Internal_Card$Coloring(
+	_rundis$elm_bootstrap$Bootstrap_Internal_Card$Roled(_rundis$elm_bootstrap$Bootstrap_Internal_Card$Primary));
+var _rundis$elm_bootstrap$Bootstrap_Card$align = function (align) {
+	return _rundis$elm_bootstrap$Bootstrap_Internal_Card$Aligned(align);
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$config = function (options) {
+	return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+		{
+			options: options,
+			header: _elm_lang$core$Maybe$Nothing,
+			footer: _elm_lang$core$Maybe$Nothing,
+			imgTop: _elm_lang$core$Maybe$Nothing,
+			imgBottom: _elm_lang$core$Maybe$Nothing,
+			blocks: {ctor: '[]'}
+		});
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$block = F3(
+	function (options, items, _p12) {
+		var _p13 = _p12;
+		var _p14 = _p13._0;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p14,
+				{
+					blocks: A2(
+						_elm_lang$core$Basics_ops['++'],
+						_p14.blocks,
+						{
+							ctor: '::',
+							_0: A2(_rundis$elm_bootstrap$Bootstrap_Internal_Card$block, options, items),
+							_1: {ctor: '[]'}
+						})
+				}));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$listGroup = F2(
+	function (items, _p15) {
+		var _p16 = _p15;
+		var _p17 = _p16._0;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p17,
+				{
+					blocks: A2(
+						_elm_lang$core$Basics_ops['++'],
+						_p17.blocks,
+						{
+							ctor: '::',
+							_0: _rundis$elm_bootstrap$Bootstrap_Internal_Card$listGroup(items),
+							_1: {ctor: '[]'}
+						})
+				}));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$CardHeader = function (a) {
+	return {ctor: 'CardHeader', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate = F4(
+	function (elemFn, attributes, children, _p18) {
+		var _p19 = _p18;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p19._0,
+				{
+					header: _elm_lang$core$Maybe$Just(
+						_rundis$elm_bootstrap$Bootstrap_Card$CardHeader(
+							A2(
+								elemFn,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('card-header'),
+									_1: attributes
+								},
+								children)))
+				}));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$header = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$div);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH1 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h1);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH2 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h2);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH3 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h3);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH4 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h4);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH5 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h5);
+var _rundis$elm_bootstrap$Bootstrap_Card$headerH6 = _rundis$elm_bootstrap$Bootstrap_Card$headerPrivate(_elm_lang$html$Html$h6);
+var _rundis$elm_bootstrap$Bootstrap_Card$CardFooter = function (a) {
+	return {ctor: 'CardFooter', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$footer = F3(
+	function (attributes, children, _p20) {
+		var _p21 = _p20;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p21._0,
+				{
+					footer: _elm_lang$core$Maybe$Just(
+						_rundis$elm_bootstrap$Bootstrap_Card$CardFooter(
+							A2(
+								_elm_lang$html$Html$div,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('card-footer'),
+									_1: attributes
+								},
+								children)))
+				}));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$CardImageTop = function (a) {
+	return {ctor: 'CardImageTop', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$imgTop = F3(
+	function (attributes, children, _p22) {
+		var _p23 = _p22;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p23._0,
+				{
+					imgTop: _elm_lang$core$Maybe$Just(
+						_rundis$elm_bootstrap$Bootstrap_Card$CardImageTop(
+							A2(
+								_elm_lang$html$Html$img,
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('card-img-top'),
+										_1: {ctor: '[]'}
+									},
+									attributes),
+								children)))
+				}));
+	});
+var _rundis$elm_bootstrap$Bootstrap_Card$CardImageBottom = function (a) {
+	return {ctor: 'CardImageBottom', _0: a};
+};
+var _rundis$elm_bootstrap$Bootstrap_Card$imgBottom = F3(
+	function (attributes, children, _p24) {
+		var _p25 = _p24;
+		return _rundis$elm_bootstrap$Bootstrap_Card$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p25._0,
+				{
+					imgBottom: _elm_lang$core$Maybe$Just(
+						_rundis$elm_bootstrap$Bootstrap_Card$CardImageBottom(
+							A2(
+								_elm_lang$html$Html$img,
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('card-img-bottom'),
+										_1: {ctor: '[]'}
+									},
+									attributes),
+								children)))
+				}));
+	});
+
 var _rundis$elm_bootstrap$Bootstrap_Grid_Col$pushXl12 = A2(_rundis$elm_bootstrap$Bootstrap_Grid_Internal$push, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$XL, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Move12);
 var _rundis$elm_bootstrap$Bootstrap_Grid_Col$pushXl11 = A2(_rundis$elm_bootstrap$Bootstrap_Grid_Internal$push, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$XL, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Move11);
 var _rundis$elm_bootstrap$Bootstrap_Grid_Col$pushXl10 = A2(_rundis$elm_bootstrap$Bootstrap_Grid_Internal$push, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$XL, _rundis$elm_bootstrap$Bootstrap_Grid_Internal$Move10);
@@ -31333,49 +32489,6 @@ var _flatrapp$shell$Globals_Types$TimeTick = function (a) {
 };
 var _flatrapp$shell$Globals_Types$AppInitialized = {ctor: 'AppInitialized'};
 
-var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
-_flatrapp$shell$Helpers_Operators_ops[':>'] = F2(
-	function (_p0, updateFn) {
-		var _p1 = _p0;
-		var _p2 = updateFn(_p1._0);
-		var newModel = _p2._0;
-		var msg = _p2._1;
-		return {
-			ctor: '_Tuple2',
-			_0: newModel,
-			_1: A2(
-				_elm_lang$core$Basics_ops['++'],
-				_p1._1,
-				{
-					ctor: '::',
-					_0: msg,
-					_1: {ctor: '[]'}
-				})
-		};
-	});
-var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
-_flatrapp$shell$Helpers_Operators_ops['!>'] = F2(
-	function (model, _p3) {
-		var _p4 = _p3;
-		return {
-			ctor: '_Tuple3',
-			_0: model,
-			_1: _elm_lang$core$Platform_Cmd$batch(_p4._0),
-			_2: _elm_lang$core$Platform_Cmd$batch(_p4._1)
-		};
-	});
-var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
-_flatrapp$shell$Helpers_Operators_ops['!:'] = F2(
-	function (model, msgs) {
-		return {
-			ctor: '_Tuple3',
-			_0: model,
-			_1: _elm_lang$core$Platform_Cmd$batch(msgs),
-			_2: _elm_lang$core$Platform_Cmd$batch(
-				{ctor: '[]'})
-		};
-	});
-
 var _flatrapp$shell$Helpers_Functions$maybe4 = function (maybeTuple) {
 	var _p0 = maybeTuple;
 	if (((((_p0.ctor === '_Tuple4') && (_p0._0.ctor === 'Just')) && (_p0._1.ctor === 'Just')) && (_p0._2.ctor === 'Just')) && (_p0._3.ctor === 'Just')) {
@@ -31464,6 +32577,49 @@ var _flatrapp$shell$Helpers_Functions$errorDecoder = function (errDec) {
 				_elm_lang$core$Json_Decode$string,
 				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(errDec))));
 };
+
+var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
+_flatrapp$shell$Helpers_Operators_ops[':>'] = F2(
+	function (_p0, updateFn) {
+		var _p1 = _p0;
+		var _p2 = updateFn(_p1._0);
+		var newModel = _p2._0;
+		var msg = _p2._1;
+		return {
+			ctor: '_Tuple2',
+			_0: newModel,
+			_1: A2(
+				_elm_lang$core$Basics_ops['++'],
+				_p1._1,
+				{
+					ctor: '::',
+					_0: msg,
+					_1: {ctor: '[]'}
+				})
+		};
+	});
+var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
+_flatrapp$shell$Helpers_Operators_ops['!>'] = F2(
+	function (model, _p3) {
+		var _p4 = _p3;
+		return {
+			ctor: '_Tuple3',
+			_0: model,
+			_1: _elm_lang$core$Platform_Cmd$batch(_p4._0),
+			_2: _elm_lang$core$Platform_Cmd$batch(_p4._1)
+		};
+	});
+var _flatrapp$shell$Helpers_Operators_ops = _flatrapp$shell$Helpers_Operators_ops || {};
+_flatrapp$shell$Helpers_Operators_ops['!:'] = F2(
+	function (model, msgs) {
+		return {
+			ctor: '_Tuple3',
+			_0: model,
+			_1: _elm_lang$core$Platform_Cmd$batch(msgs),
+			_2: _elm_lang$core$Platform_Cmd$batch(
+				{ctor: '[]'})
+		};
+	});
 
 var _flatrapp$shell$Helpers_Authentication$signupRequestEncode = function (data) {
 	return _elm_lang$core$Json_Encode$object(
@@ -31924,6 +33080,546 @@ var _flatrapp$shell$Helpers_User$listUsersResponseDecode = function (res) {
 	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_User$listUsersErrorDecoder, _flatrapp$shell$Helpers_User$ListUsersInvalidResponse, _flatrapp$shell$Helpers_User$ListUsersHttpError, res);
 };
 
+var _flatrapp$shell$Helpers_Task$userInfoFromIds = F2(
+	function (userDict, userList) {
+		return _flatrapp$shell$Helpers_Functions$maybeList(
+			A2(
+				_elm_lang$core$List$map,
+				function (id) {
+					return A2(_elm_lang$core$Dict$get, id, userDict);
+				},
+				userList));
+	});
+var _flatrapp$shell$Helpers_Task$turnMapUser = F2(
+	function (users, turn) {
+		var _p0 = A2(_elm_lang$core$Dict$get, turn.userId, users);
+		if (_p0.ctor === 'Nothing') {
+			return _elm_lang$core$Maybe$Nothing;
+		} else {
+			return _elm_lang$core$Maybe$Just(
+				{user: _p0._0, start: turn.start});
+		}
+	});
+var _flatrapp$shell$Helpers_Task$toTaskUser = F4(
+	function (users, currentTurn, upcomingTurns, task) {
+		return _elm_lang$core$Native_Utils.update(
+			task,
+			{users: users, currentTurn: currentTurn, upcomingTurns: upcomingTurns});
+	});
+var _flatrapp$shell$Helpers_Task$taskMapUser = F2(
+	function (users, task) {
+		var maybeUpcomingTurns = _flatrapp$shell$Helpers_Functions$maybeList(
+			A2(
+				_elm_lang$core$List$map,
+				function (t) {
+					return A2(_flatrapp$shell$Helpers_Task$turnMapUser, users, t);
+				},
+				task.upcomingTurns));
+		var maybeCurrentTurn = function () {
+			var _p1 = task.currentTurn;
+			if (_p1.ctor === 'Nothing') {
+				return _elm_lang$core$Maybe$Nothing;
+			} else {
+				return _elm_lang$core$Maybe$Just(
+					A2(_flatrapp$shell$Helpers_Task$turnMapUser, users, _p1._0));
+			}
+		}();
+		var _p2 = _flatrapp$shell$Helpers_Functions$maybe2(
+			{
+				ctor: '_Tuple2',
+				_0: A2(_flatrapp$shell$Helpers_Task$userInfoFromIds, users, task.users),
+				_1: maybeUpcomingTurns
+			});
+		if (_p2.ctor === 'Nothing') {
+			return _elm_lang$core$Maybe$Nothing;
+		} else {
+			var _p5 = _p2._0._1;
+			var _p4 = _p2._0._0;
+			var _p3 = maybeCurrentTurn;
+			if (_p3.ctor === 'Nothing') {
+				return _elm_lang$core$Maybe$Just(
+					A4(_flatrapp$shell$Helpers_Task$toTaskUser, _p4, _elm_lang$core$Maybe$Nothing, _p5, task));
+			} else {
+				if (_p3._0.ctor === 'Nothing') {
+					return _elm_lang$core$Maybe$Nothing;
+				} else {
+					return _elm_lang$core$Maybe$Just(
+						A4(
+							_flatrapp$shell$Helpers_Task$toTaskUser,
+							_p4,
+							_elm_lang$core$Maybe$Just(_p3._0._0),
+							_p5,
+							task));
+				}
+			}
+		}
+	});
+var _flatrapp$shell$Helpers_Task$tasksMapUser = F2(
+	function (users, tasks) {
+		return _flatrapp$shell$Helpers_Functions$maybeList(
+			A2(
+				_elm_lang$core$List$map,
+				_flatrapp$shell$Helpers_Task$taskMapUser(users),
+				tasks));
+	});
+var _flatrapp$shell$Helpers_Task$dateDecoder = A2(
+	_elm_lang$core$Json_Decode$andThen,
+	function (raw) {
+		var _p6 = _elm_community$elm_time$Time_DateTime$fromISO8601(raw);
+		if (_p6.ctor === 'Ok') {
+			return _elm_lang$core$Json_Decode$succeed(_p6._0);
+		} else {
+			return _elm_lang$core$Json_Decode$fail(_p6._0);
+		}
+	},
+	_elm_lang$core$Json_Decode$string);
+var _flatrapp$shell$Helpers_Task$turnDecoder = A3(
+	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+	'startDate',
+	_flatrapp$shell$Helpers_Task$dateDecoder,
+	A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'userId',
+		_elm_lang$core$Json_Decode$int,
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(
+			F2(
+				function (id, start) {
+					return {userId: id, start: start};
+				}))));
+var _flatrapp$shell$Helpers_Task$taskDecoder = A3(
+	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+	'upcomingTurns',
+	_elm_lang$core$Json_Decode$list(_flatrapp$shell$Helpers_Task$turnDecoder),
+	A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'currentTurn',
+		_elm_lang$core$Json_Decode$nullable(_flatrapp$shell$Helpers_Task$turnDecoder),
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'users',
+			_elm_lang$core$Json_Decode$list(_elm_lang$core$Json_Decode$int),
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'completionTime',
+				_elm_lang$core$Json_Decode$int,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'frequency',
+					_elm_lang$core$Json_Decode$int,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'description',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'title',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'id',
+								_elm_lang$core$Json_Decode$int,
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(
+									F8(
+										function (id, title, description, frequency, completionTime, users, currentTurn, upcomingTurns) {
+											return {id: id, title: title, description: description, frequency: frequency, completionTime: completionTime, users: users, currentTurn: currentTurn, upcomingTurns: upcomingTurns};
+										}))))))))));
+var _flatrapp$shell$Helpers_Task$requestTaskEncode = F2(
+	function (maybeId, task) {
+		return _elm_lang$core$Json_Encode$object(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				function () {
+					var _p7 = maybeId;
+					if (_p7.ctor === 'Just') {
+						return {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'id',
+								_1: _elm_lang$core$Json_Encode$int(_p7._0)
+							},
+							_1: {ctor: '[]'}
+						};
+					} else {
+						return {ctor: '[]'};
+					}
+				}(),
+				{
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'title',
+						_1: _elm_lang$core$Json_Encode$string(task.title)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'description',
+							_1: _elm_lang$core$Json_Encode$string(task.description)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'frequency',
+								_1: _elm_lang$core$Json_Encode$int(task.frequency)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'completionTime',
+									_1: _elm_lang$core$Json_Encode$int(task.completionTime)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'users',
+										_1: _elm_lang$core$Json_Encode$list(
+											A2(_elm_lang$core$List$map, _elm_lang$core$Json_Encode$int, task.users))
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}));
+	});
+var _flatrapp$shell$Helpers_Task$requestTimeout = 5 * _elm_lang$core$Time$second;
+var _flatrapp$shell$Helpers_Task$Task = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {id: a, title: b, description: c, frequency: d, completionTime: e, users: f, currentTurn: g, upcomingTurns: h};
+	});
+var _flatrapp$shell$Helpers_Task$TaskUser = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {id: a, title: b, description: c, frequency: d, completionTime: e, users: f, currentTurn: g, upcomingTurns: h};
+	});
+var _flatrapp$shell$Helpers_Task$RequestTask = F5(
+	function (a, b, c, d, e) {
+		return {title: a, description: b, frequency: c, completionTime: d, users: e};
+	});
+var _flatrapp$shell$Helpers_Task$Turn = F2(
+	function (a, b) {
+		return {userId: a, start: b};
+	});
+var _flatrapp$shell$Helpers_Task$TurnUser = F2(
+	function (a, b) {
+		return {user: a, start: b};
+	});
+var _flatrapp$shell$Helpers_Task$CreateTaskHttpError = function (a) {
+	return {ctor: 'CreateTaskHttpError', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$CreateTaskInvalidResponse = {ctor: 'CreateTaskInvalidResponse'};
+var _flatrapp$shell$Helpers_Task$CreateTaskErrorResponse = function (a) {
+	return {ctor: 'CreateTaskErrorResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$CreateTaskSuccessResponse = function (a) {
+	return {ctor: 'CreateTaskSuccessResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$createTaskRequest = F3(
+	function (serverUrl, auth, requestTask) {
+		return _elm_lang$http$Http$request(
+			{
+				body: _elm_lang$http$Http$jsonBody(
+					A2(_flatrapp$shell$Helpers_Task$requestTaskEncode, _elm_lang$core$Maybe$Nothing, requestTask)),
+				expect: _elm_lang$http$Http$expectJson(
+					A2(
+						_elm_lang$core$Json_Decode$map,
+						function (t) {
+							return _flatrapp$shell$Helpers_Task$CreateTaskSuccessResponse(t);
+						},
+						_flatrapp$shell$Helpers_Task$taskDecoder)),
+				headers: _flatrapp$shell$Helpers_Authentication$authenticationHeaders(auth),
+				method: 'POST',
+				timeout: _elm_lang$core$Maybe$Just(_flatrapp$shell$Helpers_Task$requestTimeout),
+				url: A2(_elm_lang$core$Basics_ops['++'], serverUrl, '/tasks'),
+				withCredentials: false
+			});
+	});
+var _flatrapp$shell$Helpers_Task$UnknownCreateTaskError = function (a) {
+	return {ctor: 'UnknownCreateTaskError', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$createTaskErrorDecoder = _flatrapp$shell$Helpers_Functions$errorDecoder(
+	F2(
+		function (code, message) {
+			return _flatrapp$shell$Helpers_Task$CreateTaskErrorResponse(
+				{
+					error: function () {
+						var _p8 = code;
+						return _flatrapp$shell$Helpers_Task$UnknownCreateTaskError(code);
+					}(),
+					message: message
+				});
+		}));
+var _flatrapp$shell$Helpers_Task$createTaskResponseDecode = function (res) {
+	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_Task$createTaskErrorDecoder, _flatrapp$shell$Helpers_Task$CreateTaskInvalidResponse, _flatrapp$shell$Helpers_Task$CreateTaskHttpError, res);
+};
+var _flatrapp$shell$Helpers_Task$ListTasksHttpError = function (a) {
+	return {ctor: 'ListTasksHttpError', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$ListTasksInvalidResponse = {ctor: 'ListTasksInvalidResponse'};
+var _flatrapp$shell$Helpers_Task$ListTasksErrorResponse = function (a) {
+	return {ctor: 'ListTasksErrorResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$ListTasksSuccessResponse = function (a) {
+	return {ctor: 'ListTasksSuccessResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$listTasksRequest = function (auth) {
+	return _elm_lang$http$Http$request(
+		{
+			body: _elm_lang$http$Http$emptyBody,
+			expect: _elm_lang$http$Http$expectJson(
+				A2(
+					_elm_lang$core$Json_Decode$map,
+					function (l) {
+						return _flatrapp$shell$Helpers_Task$ListTasksSuccessResponse(l);
+					},
+					_elm_lang$core$Json_Decode$list(_flatrapp$shell$Helpers_Task$taskDecoder))),
+			headers: _flatrapp$shell$Helpers_Authentication$authenticationHeaders(auth),
+			method: 'GET',
+			timeout: _elm_lang$core$Maybe$Just(_flatrapp$shell$Helpers_Task$requestTimeout),
+			url: A2(_elm_lang$core$Basics_ops['++'], auth.serverUrl, '/tasks'),
+			withCredentials: false
+		});
+};
+var _flatrapp$shell$Helpers_Task$UnknownListTasksError = function (a) {
+	return {ctor: 'UnknownListTasksError', _0: a};
+};
+var _flatrapp$shell$Helpers_Task$listTasksErrorDecoder = _flatrapp$shell$Helpers_Functions$errorDecoder(
+	F2(
+		function (code, message) {
+			return _flatrapp$shell$Helpers_Task$ListTasksErrorResponse(
+				{
+					error: function () {
+						var _p9 = code;
+						return _flatrapp$shell$Helpers_Task$UnknownListTasksError(code);
+					}(),
+					message: message
+				});
+		}));
+var _flatrapp$shell$Helpers_Task$listTasksResponseDecode = function (res) {
+	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_Task$listTasksErrorDecoder, _flatrapp$shell$Helpers_Task$ListTasksInvalidResponse, _flatrapp$shell$Helpers_Task$ListTasksHttpError, res);
+};
+
+var _flatrapp$shell$Components_Dashboard$renderUpcomingTask = F4(
+	function (task, turn, time, timezoneOffset) {
+		return A2(
+			_rundis$elm_bootstrap$Bootstrap_ListGroup$li,
+			{
+				ctor: '::',
+				_0: _rundis$elm_bootstrap$Bootstrap_ListGroup$attrs(
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('flex-column align-items-start'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('d-flex w-100 justify-content-between'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h5,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('mb-1'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '20px'},
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(task.title),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _flatrapp$shell$Components_Dashboard$taskRemainingTime = F4(
+	function (start, completionTime, time, timezoneOffset) {
+		var current = _elm_community$elm_time$Time_DateTime$fromTimestamp(time);
+		var end = A2(_elm_community$elm_time$Time_DateTime$addHours, completionTime, start);
+		var delta = A2(_elm_community$elm_time$Time_DateTime$delta, end, current);
+		var daysString = _elm_lang$core$Native_Utils.eq(delta.days, 1) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(delta.days),
+			' day ') : ((_elm_lang$core$Native_Utils.cmp(delta.days, 1) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(delta.days),
+			' days ') : '');
+		var hoursString = _elm_lang$core$Native_Utils.eq(delta.hours, 1) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(
+				A2(_elm_lang$core$Basics_ops['%'], delta.hours, 24)),
+			' hours left') : A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(
+				A2(_elm_lang$core$Basics_ops['%'], delta.hours, 24)),
+			' hours left');
+		return A2(_elm_lang$core$Basics_ops['++'], daysString, hoursString);
+	});
+var _flatrapp$shell$Components_Dashboard$renderCurrentTask = F4(
+	function (task, turn, time, timezoneOffset) {
+		return A2(
+			_rundis$elm_bootstrap$Bootstrap_ListGroup$li,
+			{
+				ctor: '::',
+				_0: _rundis$elm_bootstrap$Bootstrap_ListGroup$attrs(
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('flex-column align-items-start'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('d-flex w-100 justify-content-between'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h5,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('mb-1'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '20px'},
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(task.title),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_rundis$elm_bootstrap$Bootstrap_Badge$badge,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(
+												A2(
+													_elm_lang$core$Basics_ops['++'],
+													turn.user.firstName,
+													A2(_elm_lang$core$Basics_ops['++'], ' ', turn.user.lastName))),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h5,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('mb-1'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_rundis$elm_bootstrap$Bootstrap_Badge$badgeWarning,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(
+												A4(_flatrapp$shell$Components_Dashboard$taskRemainingTime, turn.start, task.completionTime, time, timezoneOffset)),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('mb-1'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(task.description),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _flatrapp$shell$Components_Dashboard$renderTasks = F4(
+	function (displayCurrentTurn, tasks, time, timezoneOffset) {
+		return A2(
+			_elm_lang$core$List$filterMap,
+			function (task) {
+				if (displayCurrentTurn) {
+					var _p0 = task.currentTurn;
+					if (_p0.ctor === 'Nothing') {
+						return _elm_lang$core$Maybe$Nothing;
+					} else {
+						return _elm_lang$core$Maybe$Just(
+							A4(_flatrapp$shell$Components_Dashboard$renderCurrentTask, task, _p0._0, time, timezoneOffset));
+					}
+				} else {
+					var _p1 = _elm_lang$core$List$head(task.upcomingTurns);
+					if (_p1.ctor === 'Nothing') {
+						return _elm_lang$core$Maybe$Nothing;
+					} else {
+						return _elm_lang$core$Maybe$Just(
+							A4(_flatrapp$shell$Components_Dashboard$renderUpcomingTask, task, _p1._0, time, timezoneOffset));
+					}
+				}
+			},
+			tasks);
+	});
 var _flatrapp$shell$Components_Dashboard$loadingScreen = A2(
 	_elm_lang$html$Html$h1,
 	{ctor: '[]'},
@@ -31938,7 +33634,7 @@ var _flatrapp$shell$Components_Dashboard$send = function (msg) {
 		_elm_lang$core$Basics$identity,
 		_elm_lang$core$Task$succeed(msg));
 };
-var _flatrapp$shell$Components_Dashboard$initialModel = {viewState: false, lastUpdate: 0, currentUser: _elm_lang$core$Maybe$Nothing};
+var _flatrapp$shell$Components_Dashboard$initialModel = {viewState: false, lastUpdate: 0, currentUser: _elm_lang$core$Maybe$Nothing, users: _elm_lang$core$Maybe$Nothing, tasks: _elm_lang$core$Maybe$Nothing};
 var _flatrapp$shell$Components_Dashboard$updateInterval = 10 * _elm_lang$core$Time$second;
 var _flatrapp$shell$Components_Dashboard$greeting = F2(
 	function (timezoneOffset, time) {
@@ -31967,8 +33663,8 @@ var _flatrapp$shell$Components_Dashboard$greeting = F2(
 						'Good Evening'),
 					'Hello')));
 	});
-var _flatrapp$shell$Components_Dashboard$content = F4(
-	function (model, globals, user, time) {
+var _flatrapp$shell$Components_Dashboard$content = F5(
+	function (model, globals, tasks, currentUser, time) {
 		return {
 			ctor: '_Tuple2',
 			_0: A2(
@@ -31986,55 +33682,159 @@ var _flatrapp$shell$Components_Dashboard$content = F4(
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text(
-										A2(
-											_elm_lang$core$Basics_ops['++'],
-											A2(_flatrapp$shell$Components_Dashboard$greeting, globals.timezoneOffset, time),
-											A2(
-												_elm_lang$core$Basics_ops['++'],
-												', ',
+									_0: A2(
+										_elm_lang$html$Html$h1,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(
 												A2(
 													_elm_lang$core$Basics_ops['++'],
-													user.firstName,
+													A2(_flatrapp$shell$Components_Dashboard$greeting, globals.timezoneOffset, time),
 													A2(
 														_elm_lang$core$Basics_ops['++'],
-														' ',
-														A2(_elm_lang$core$Basics_ops['++'], user.lastName, '!')))))),
+														', ',
+														A2(
+															_elm_lang$core$Basics_ops['++'],
+															currentUser.firstName,
+															A2(
+																_elm_lang$core$Basics_ops['++'],
+																' ',
+																A2(_elm_lang$core$Basics_ops['++'], currentUser.lastName, '!')))))),
+											_1: {ctor: '[]'}
+										}),
 									_1: {ctor: '[]'}
 								}),
 							_1: {ctor: '[]'}
 						}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$hr,
+							{ctor: '[]'},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$br,
+								{ctor: '[]'},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_rundis$elm_bootstrap$Bootstrap_Grid$row,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: A2(
+											_rundis$elm_bootstrap$Bootstrap_Grid$col,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: _rundis$elm_bootstrap$Bootstrap_Card$view(
+													A2(
+														_rundis$elm_bootstrap$Bootstrap_Card$listGroup,
+														A4(_flatrapp$shell$Components_Dashboard$renderTasks, true, tasks, time, globals.timezoneOffset),
+														A3(
+															_rundis$elm_bootstrap$Bootstrap_Card$headerH5,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('Current tasks'),
+																_1: {ctor: '[]'}
+															},
+															_rundis$elm_bootstrap$Bootstrap_Card$config(
+																{ctor: '[]'})))),
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$br,
+										{ctor: '[]'},
+										{ctor: '[]'}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$br,
+											{ctor: '[]'},
+											{ctor: '[]'}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_rundis$elm_bootstrap$Bootstrap_Grid$row,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: A2(
+														_rundis$elm_bootstrap$Bootstrap_Grid$col,
+														{ctor: '[]'},
+														{
+															ctor: '::',
+															_0: _rundis$elm_bootstrap$Bootstrap_Card$view(
+																A2(
+																	_rundis$elm_bootstrap$Bootstrap_Card$listGroup,
+																	A4(_flatrapp$shell$Components_Dashboard$renderTasks, false, tasks, time, globals.timezoneOffset),
+																	A3(
+																		_rundis$elm_bootstrap$Bootstrap_Card$headerH5,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('Upcoming tasks'),
+																			_1: {ctor: '[]'}
+																		},
+																		_rundis$elm_bootstrap$Bootstrap_Card$config(
+																			{ctor: '[]'})))),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
 				}),
 			_1: _elm_lang$html$Html$text('Fancy footer message from the Dashboard Component')
 		};
 	});
 var _flatrapp$shell$Components_Dashboard$view = F2(
 	function (model, globals) {
-		var _p0 = model.currentUser;
-		if (_p0.ctor === 'Nothing') {
+		var _p2 = _flatrapp$shell$Helpers_Functions$maybe4(
+			{ctor: '_Tuple4', _0: model.currentUser, _1: model.tasks, _2: model.users, _3: globals.time});
+		if (_p2.ctor === 'Nothing') {
 			return {
 				ctor: '_Tuple2',
 				_0: _flatrapp$shell$Components_Dashboard$loadingScreen,
 				_1: _elm_lang$html$Html$text('')
 			};
 		} else {
-			var _p1 = globals.time;
-			if (_p1.ctor === 'Nothing') {
+			var _p3 = A2(_flatrapp$shell$Helpers_Task$tasksMapUser, _p2._0._2, _p2._0._1);
+			if (_p3.ctor === 'Just') {
+				return A5(_flatrapp$shell$Components_Dashboard$content, model, globals, _p3._0, _p2._0._0, _p2._0._3);
+			} else {
 				return {
 					ctor: '_Tuple2',
-					_0: _flatrapp$shell$Components_Dashboard$loadingScreen,
+					_0: _elm_lang$html$Html$text('Error: A user specified by a task could not be found!'),
 					_1: _elm_lang$html$Html$text('')
 				};
-			} else {
-				return A4(_flatrapp$shell$Components_Dashboard$content, model, globals, _p0._0, _p1._0);
 			}
 		}
 	});
-var _flatrapp$shell$Components_Dashboard$Model = F3(
-	function (a, b, c) {
-		return {viewState: a, lastUpdate: b, currentUser: c};
+var _flatrapp$shell$Components_Dashboard$Model = F5(
+	function (a, b, c, d, e) {
+		return {viewState: a, lastUpdate: b, currentUser: c, users: d, tasks: e};
 	});
+var _flatrapp$shell$Components_Dashboard$ListTasksResponse = function (a) {
+	return {ctor: 'ListTasksResponse', _0: a};
+};
+var _flatrapp$shell$Components_Dashboard$ListUsersResponse = function (a) {
+	return {ctor: 'ListUsersResponse', _0: a};
+};
 var _flatrapp$shell$Components_Dashboard$CurrentUserResponse = function (a) {
 	return {ctor: 'CurrentUserResponse', _0: a};
 };
@@ -32045,30 +33845,30 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 	function (msg, model, globals) {
 		update:
 		while (true) {
-			var _p2 = msg;
-			switch (_p2.ctor) {
+			var _p4 = msg;
+			switch (_p4.ctor) {
 				case 'ViewState':
-					var _p3 = _p2._0;
-					if (_elm_lang$core$Native_Utils.eq(model.viewState, false) && _elm_lang$core$Native_Utils.eq(_p3, true)) {
-						var _v3 = _flatrapp$shell$Components_Dashboard$ShowView,
-							_v4 = _elm_lang$core$Native_Utils.update(
+					var _p5 = _p4._0;
+					if (_elm_lang$core$Native_Utils.eq(model.viewState, false) && _elm_lang$core$Native_Utils.eq(_p5, true)) {
+						var _v5 = _flatrapp$shell$Components_Dashboard$ShowView,
+							_v6 = _elm_lang$core$Native_Utils.update(
 							model,
-							{viewState: _p3}),
-							_v5 = globals;
-						msg = _v3;
-						model = _v4;
-						globals = _v5;
+							{viewState: _p5}),
+							_v7 = globals;
+						msg = _v5;
+						model = _v6;
+						globals = _v7;
 						continue update;
 					} else {
-						if (_elm_lang$core$Native_Utils.eq(model.viewState, true) && _elm_lang$core$Native_Utils.eq(_p3, false)) {
-							var _v6 = _flatrapp$shell$Components_Dashboard$HideView,
-								_v7 = _elm_lang$core$Native_Utils.update(
+						if (_elm_lang$core$Native_Utils.eq(model.viewState, true) && _elm_lang$core$Native_Utils.eq(_p5, false)) {
+							var _v8 = _flatrapp$shell$Components_Dashboard$HideView,
+								_v9 = _elm_lang$core$Native_Utils.update(
 								model,
-								{viewState: _p3}),
-								_v8 = globals;
-							msg = _v6;
-							model = _v7;
-							globals = _v8;
+								{viewState: _p5}),
+								_v10 = globals;
+							msg = _v8;
+							model = _v9;
+							globals = _v10;
 							continue update;
 						} else {
 							return A2(
@@ -32078,12 +33878,12 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 						}
 					}
 				case 'ShowView':
-					var _v9 = _flatrapp$shell$Components_Dashboard$UpdateData,
-						_v10 = model,
-						_v11 = globals;
-					msg = _v9;
-					model = _v10;
-					globals = _v11;
+					var _v11 = _flatrapp$shell$Components_Dashboard$UpdateData,
+						_v12 = model,
+						_v13 = globals;
+					msg = _v11;
+					model = _v12;
+					globals = _v13;
 					continue update;
 				case 'HideView':
 					return A2(
@@ -32093,13 +33893,13 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 							{currentUser: _elm_lang$core$Maybe$Nothing}),
 						{ctor: '[]'});
 				case 'TimeTick':
-					if (model.viewState && (_elm_lang$core$Native_Utils.cmp(model.lastUpdate + _flatrapp$shell$Components_Dashboard$updateInterval, _p2._0) < 0)) {
-						var _v12 = _flatrapp$shell$Components_Dashboard$UpdateData,
-							_v13 = model,
-							_v14 = globals;
-						msg = _v12;
-						model = _v13;
-						globals = _v14;
+					if (model.viewState && (_elm_lang$core$Native_Utils.cmp(model.lastUpdate + _flatrapp$shell$Components_Dashboard$updateInterval, _p4._0) < 0)) {
+						var _v14 = _flatrapp$shell$Components_Dashboard$UpdateData,
+							_v15 = model,
+							_v16 = globals;
+						msg = _v14;
+						model = _v15;
+						globals = _v16;
 						continue update;
 					} else {
 						return A2(
@@ -32108,22 +33908,37 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 							{ctor: '[]'});
 					}
 				case 'UpdateData':
-					var _p4 = globals.auth;
-					if (_p4.ctor === 'Just') {
-						var _p5 = globals.time;
-						if (_p5.ctor === 'Just') {
+					var _p6 = globals.auth;
+					if (_p6.ctor === 'Just') {
+						var _p8 = _p6._0;
+						var _p7 = globals.time;
+						if (_p7.ctor === 'Just') {
 							return A2(
 								_flatrapp$shell$Helpers_Operators_ops['!:'],
 								_elm_lang$core$Native_Utils.update(
 									model,
-									{lastUpdate: _p5._0}),
+									{lastUpdate: _p7._0}),
 								{
 									ctor: '::',
 									_0: A2(
 										_elm_lang$http$Http$send,
 										_flatrapp$shell$Components_Dashboard$CurrentUserResponse,
-										_flatrapp$shell$Helpers_User$currentUserRequest(_p4._0)),
-									_1: {ctor: '[]'}
+										_flatrapp$shell$Helpers_User$currentUserRequest(_p8)),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$http$Http$send,
+											_flatrapp$shell$Components_Dashboard$ListUsersResponse,
+											_flatrapp$shell$Helpers_User$listUsersRequest(_p8)),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$http$Http$send,
+												_flatrapp$shell$Components_Dashboard$ListTasksResponse,
+												_flatrapp$shell$Helpers_Task$listTasksRequest(_p8)),
+											_1: {ctor: '[]'}
+										}
+									}
 								});
 						} else {
 							return A2(
@@ -32137,21 +33952,21 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 							model,
 							{ctor: '[]'});
 					}
-				default:
-					var _p6 = _flatrapp$shell$Helpers_User$currentUserResponseDecode(_p2._0);
-					switch (_p6.ctor) {
+				case 'CurrentUserResponse':
+					var _p9 = _flatrapp$shell$Helpers_User$currentUserResponseDecode(_p4._0);
+					switch (_p9.ctor) {
 						case 'CurrentUserSuccessResponse':
 							return A2(
 								_flatrapp$shell$Helpers_Operators_ops['!:'],
 								_elm_lang$core$Native_Utils.update(
 									model,
 									{
-										currentUser: _elm_lang$core$Maybe$Just(_p6._0)
+										currentUser: _elm_lang$core$Maybe$Just(_p9._0)
 									}),
 								{ctor: '[]'});
 						case 'CurrentUserErrorResponse':
-							var _p7 = _p6._0.error;
-							if (_p7.ctor === 'CurrentUserUnauthorizedError') {
+							var _p10 = _p9._0.error;
+							if (_p10.ctor === 'CurrentUserUnauthorizedError') {
 								return A2(
 									_flatrapp$shell$Helpers_Operators_ops['!>'],
 									model,
@@ -32174,7 +33989,7 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 									model,
 									{
 										ctor: '::',
-										_0: A2(_flatrapp$shell$Helpers_Toast$errorToast, 'Unknown Error while retrieving user info', _p6._0.message),
+										_0: A2(_flatrapp$shell$Helpers_Toast$errorToast, 'Unknown Error while retrieving user info', _p9._0.message),
 										_1: {ctor: '[]'}
 									});
 							}
@@ -32187,6 +34002,48 @@ var _flatrapp$shell$Components_Dashboard$update = F3(
 									_0: A2(_flatrapp$shell$Helpers_Toast$errorToast, 'Connection Error', 'There was an error while communicating with the server.'),
 									_1: {ctor: '[]'}
 								});
+					}
+				case 'ListUsersResponse':
+					var _p11 = _flatrapp$shell$Helpers_User$listUsersResponseDecode(_p4._0);
+					if (_p11.ctor === 'ListUsersSuccessResponse') {
+						return A2(
+							_flatrapp$shell$Helpers_Operators_ops['!:'],
+							_elm_lang$core$Native_Utils.update(
+								model,
+								{
+									users: _elm_lang$core$Maybe$Just(_p11._0)
+								}),
+							{ctor: '[]'});
+					} else {
+						return A2(
+							_flatrapp$shell$Helpers_Operators_ops['!:'],
+							model,
+							{
+								ctor: '::',
+								_0: A2(_flatrapp$shell$Helpers_Toast$errorToast, 'Unknown Error', 'An unknown error occured while retrieving the list of users'),
+								_1: {ctor: '[]'}
+							});
+					}
+				default:
+					var _p12 = _flatrapp$shell$Helpers_Task$listTasksResponseDecode(_p4._0);
+					if (_p12.ctor === 'ListTasksSuccessResponse') {
+						return A2(
+							_flatrapp$shell$Helpers_Operators_ops['!:'],
+							_elm_lang$core$Native_Utils.update(
+								model,
+								{
+									tasks: _elm_lang$core$Maybe$Just(_p12._0)
+								}),
+							{ctor: '[]'});
+					} else {
+						return A2(
+							_flatrapp$shell$Helpers_Operators_ops['!:'],
+							model,
+							{
+								ctor: '::',
+								_0: A2(_flatrapp$shell$Helpers_Toast$errorToast, 'Unknown Error', 'An unknown error occured while retrieving the list of tasks'),
+								_1: {ctor: '[]'}
+							});
 					}
 			}
 		}
