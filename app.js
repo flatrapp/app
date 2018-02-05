@@ -31376,24 +31376,73 @@ _flatrapp$shell$Helpers_Operators_ops['!:'] = F2(
 		};
 	});
 
+var _flatrapp$shell$Helpers_Functions$maybe4 = function (maybeTuple) {
+	var _p0 = maybeTuple;
+	if (((((_p0.ctor === '_Tuple4') && (_p0._0.ctor === 'Just')) && (_p0._1.ctor === 'Just')) && (_p0._2.ctor === 'Just')) && (_p0._3.ctor === 'Just')) {
+		return _elm_lang$core$Maybe$Just(
+			{ctor: '_Tuple4', _0: _p0._0._0, _1: _p0._1._0, _2: _p0._2._0, _3: _p0._3._0});
+	} else {
+		return _elm_lang$core$Maybe$Nothing;
+	}
+};
+var _flatrapp$shell$Helpers_Functions$maybe3 = function (maybeTuple) {
+	var _p1 = maybeTuple;
+	if ((((_p1.ctor === '_Tuple3') && (_p1._0.ctor === 'Just')) && (_p1._1.ctor === 'Just')) && (_p1._2.ctor === 'Just')) {
+		return _elm_lang$core$Maybe$Just(
+			{ctor: '_Tuple3', _0: _p1._0._0, _1: _p1._1._0, _2: _p1._2._0});
+	} else {
+		return _elm_lang$core$Maybe$Nothing;
+	}
+};
+var _flatrapp$shell$Helpers_Functions$maybe2 = function (maybeTuple) {
+	var _p2 = maybeTuple;
+	if (((_p2.ctor === '_Tuple2') && (_p2._0.ctor === 'Just')) && (_p2._1.ctor === 'Just')) {
+		return _elm_lang$core$Maybe$Just(
+			{ctor: '_Tuple2', _0: _p2._0._0, _1: _p2._1._0});
+	} else {
+		return _elm_lang$core$Maybe$Nothing;
+	}
+};
+var _flatrapp$shell$Helpers_Functions$maybeList = function (maybeList) {
+	return A3(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (current, prev) {
+				var _p3 = prev;
+				if (_p3.ctor === 'Nothing') {
+					return _elm_lang$core$Maybe$Nothing;
+				} else {
+					var _p4 = current;
+					if (_p4.ctor === 'Nothing') {
+						return _elm_lang$core$Maybe$Nothing;
+					} else {
+						return _elm_lang$core$Maybe$Just(
+							{ctor: '::', _0: _p4._0, _1: _p3._0});
+					}
+				}
+			}),
+		_elm_lang$core$Maybe$Just(
+			{ctor: '[]'}),
+		maybeList);
+};
 var _flatrapp$shell$Helpers_Functions$flexibleResponseDecode = F5(
 	function (successDecoder, badStatusDecoder, parsingError, httpError, res) {
-		var _p0 = res;
-		if (_p0.ctor === 'Ok') {
-			return successDecoder(_p0._0);
+		var _p5 = res;
+		if (_p5.ctor === 'Ok') {
+			return successDecoder(_p5._0);
 		} else {
-			switch (_p0._0.ctor) {
+			switch (_p5._0.ctor) {
 				case 'BadStatus':
-					var _p1 = A2(_elm_lang$core$Json_Decode$decodeString, badStatusDecoder, _p0._0._0.body);
-					if (_p1.ctor === 'Err') {
+					var _p6 = A2(_elm_lang$core$Json_Decode$decodeString, badStatusDecoder, _p5._0._0.body);
+					if (_p6.ctor === 'Err') {
 						return parsingError;
 					} else {
-						return _p1._0;
+						return _p6._0;
 					}
 				case 'BadPayload':
 					return parsingError;
 				default:
-					return httpError(_p0._0);
+					return httpError(_p5._0);
 			}
 		}
 	});
@@ -31738,22 +31787,7 @@ var _flatrapp$shell$Helpers_Authentication$signupResponseDecode = function (res)
 	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_Authentication$signupResponseErrorDecoder, _flatrapp$shell$Helpers_Authentication$SignupInvalidResponse, _flatrapp$shell$Helpers_Authentication$SignupHttpError, res);
 };
 
-var _flatrapp$shell$Helpers_User$requestTimeout = 5 * _elm_lang$core$Time$second;
-var _flatrapp$shell$Helpers_User$UserInfo = F4(
-	function (a, b, c, d) {
-		return {id: a, email: b, firstName: c, lastName: d};
-	});
-var _flatrapp$shell$Helpers_User$CurrentUserHttpError = function (a) {
-	return {ctor: 'CurrentUserHttpError', _0: a};
-};
-var _flatrapp$shell$Helpers_User$CurrentUserInvalidResponse = {ctor: 'CurrentUserInvalidResponse'};
-var _flatrapp$shell$Helpers_User$CurrentUserErrorResponse = function (a) {
-	return {ctor: 'CurrentUserErrorResponse', _0: a};
-};
-var _flatrapp$shell$Helpers_User$CurrentUserSuccessResponse = function (a) {
-	return {ctor: 'CurrentUserSuccessResponse', _0: a};
-};
-var _flatrapp$shell$Helpers_User$currentUserSuccessDecoder = A3(
+var _flatrapp$shell$Helpers_User$userInfoDecoder = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 	'lastName',
 	_elm_lang$core$Json_Decode$string,
@@ -31772,14 +31806,34 @@ var _flatrapp$shell$Helpers_User$currentUserSuccessDecoder = A3(
 				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(
 					F4(
 						function (id, email, firstName, lastName) {
-							return _flatrapp$shell$Helpers_User$CurrentUserSuccessResponse(
-								{id: id, email: email, firstName: firstName, lastName: lastName});
+							return {id: id, email: email, firstName: firstName, lastName: lastName};
 						}))))));
+var _flatrapp$shell$Helpers_User$requestTimeout = 5 * _elm_lang$core$Time$second;
+var _flatrapp$shell$Helpers_User$UserInfo = F4(
+	function (a, b, c, d) {
+		return {id: a, email: b, firstName: c, lastName: d};
+	});
+var _flatrapp$shell$Helpers_User$CurrentUserHttpError = function (a) {
+	return {ctor: 'CurrentUserHttpError', _0: a};
+};
+var _flatrapp$shell$Helpers_User$CurrentUserInvalidResponse = {ctor: 'CurrentUserInvalidResponse'};
+var _flatrapp$shell$Helpers_User$CurrentUserErrorResponse = function (a) {
+	return {ctor: 'CurrentUserErrorResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_User$CurrentUserSuccessResponse = function (a) {
+	return {ctor: 'CurrentUserSuccessResponse', _0: a};
+};
 var _flatrapp$shell$Helpers_User$currentUserRequest = function (auth) {
 	return _elm_lang$http$Http$request(
 		{
 			body: _elm_lang$http$Http$emptyBody,
-			expect: _elm_lang$http$Http$expectJson(_flatrapp$shell$Helpers_User$currentUserSuccessDecoder),
+			expect: _elm_lang$http$Http$expectJson(
+				A2(
+					_elm_lang$core$Json_Decode$map,
+					function (u) {
+						return _flatrapp$shell$Helpers_User$CurrentUserSuccessResponse(u);
+					},
+					_flatrapp$shell$Helpers_User$userInfoDecoder)),
 			headers: _flatrapp$shell$Helpers_Authentication$authenticationHeaders(auth),
 			method: 'GET',
 			timeout: _elm_lang$core$Maybe$Just(_flatrapp$shell$Helpers_User$requestTimeout),
@@ -31791,52 +31845,83 @@ var _flatrapp$shell$Helpers_User$CurrentUserUnknownError = function (a) {
 	return {ctor: 'CurrentUserUnknownError', _0: a};
 };
 var _flatrapp$shell$Helpers_User$CurrentUserUnauthorizedError = {ctor: 'CurrentUserUnauthorizedError'};
-var _flatrapp$shell$Helpers_User$currentUserErrorDecoder = A2(
-	_elm_lang$core$Json_Decode$field,
-	'error',
-	A3(
-		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
-		'message',
-		_elm_lang$core$Json_Decode$string,
-		A3(
-			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
-			'code',
-			_elm_lang$core$Json_Decode$string,
-			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(
-				F2(
-					function (code, message) {
-						return _flatrapp$shell$Helpers_User$CurrentUserErrorResponse(
-							{
-								error: function () {
-									var _p0 = code;
-									if (_p0 === 'unauthorized') {
-										return _flatrapp$shell$Helpers_User$CurrentUserUnauthorizedError;
-									} else {
-										return _flatrapp$shell$Helpers_User$CurrentUserUnknownError(_p0);
-									}
-								}(),
-								message: message
-							});
-					})))));
+var _flatrapp$shell$Helpers_User$currentUserErrorDecoder = _flatrapp$shell$Helpers_Functions$errorDecoder(
+	F2(
+		function (code, message) {
+			return _flatrapp$shell$Helpers_User$CurrentUserErrorResponse(
+				{
+					error: function () {
+						var _p0 = code;
+						if (_p0 === 'unauthorized') {
+							return _flatrapp$shell$Helpers_User$CurrentUserUnauthorizedError;
+						} else {
+							return _flatrapp$shell$Helpers_User$CurrentUserUnknownError(_p0);
+						}
+					}(),
+					message: message
+				});
+		}));
 var _flatrapp$shell$Helpers_User$currentUserResponseDecode = function (res) {
-	var _p1 = res;
-	if (_p1.ctor === 'Ok') {
-		return _p1._0;
-	} else {
-		switch (_p1._0.ctor) {
-			case 'BadStatus':
-				var _p2 = A2(_elm_lang$core$Json_Decode$decodeString, _flatrapp$shell$Helpers_User$currentUserErrorDecoder, _p1._0._0.body);
-				if (_p2.ctor === 'Err') {
-					return _flatrapp$shell$Helpers_User$CurrentUserInvalidResponse;
-				} else {
-					return _p2._0;
-				}
-			case 'BadPayload':
-				return _flatrapp$shell$Helpers_User$CurrentUserInvalidResponse;
-			default:
-				return _flatrapp$shell$Helpers_User$CurrentUserHttpError(_p1._0);
-		}
-	}
+	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_User$currentUserErrorDecoder, _flatrapp$shell$Helpers_User$CurrentUserInvalidResponse, _flatrapp$shell$Helpers_User$CurrentUserHttpError, res);
+};
+var _flatrapp$shell$Helpers_User$ListUsersHttpError = function (a) {
+	return {ctor: 'ListUsersHttpError', _0: a};
+};
+var _flatrapp$shell$Helpers_User$ListUsersInvalidResponse = {ctor: 'ListUsersInvalidResponse'};
+var _flatrapp$shell$Helpers_User$ListUsersErrorResponse = function (a) {
+	return {ctor: 'ListUsersErrorResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_User$ListUsersSuccessResponse = function (a) {
+	return {ctor: 'ListUsersSuccessResponse', _0: a};
+};
+var _flatrapp$shell$Helpers_User$listUsersRequest = function (auth) {
+	return _elm_lang$http$Http$request(
+		{
+			body: _elm_lang$http$Http$emptyBody,
+			expect: _elm_lang$http$Http$expectJson(
+				A2(
+					_elm_lang$core$Json_Decode$map,
+					function (users) {
+						return _flatrapp$shell$Helpers_User$ListUsersSuccessResponse(
+							A3(
+								_elm_lang$core$List$foldl,
+								F2(
+									function (user, dict) {
+										return A3(_elm_lang$core$Dict$insert, user.id, user, dict);
+									}),
+								_elm_lang$core$Dict$empty,
+								users));
+					},
+					_elm_lang$core$Json_Decode$list(_flatrapp$shell$Helpers_User$userInfoDecoder))),
+			headers: _flatrapp$shell$Helpers_Authentication$authenticationHeaders(auth),
+			method: 'GET',
+			timeout: _elm_lang$core$Maybe$Just(_flatrapp$shell$Helpers_User$requestTimeout),
+			url: A2(_elm_lang$core$Basics_ops['++'], auth.serverUrl, '/users'),
+			withCredentials: false
+		});
+};
+var _flatrapp$shell$Helpers_User$ListUsersUnknownError = function (a) {
+	return {ctor: 'ListUsersUnknownError', _0: a};
+};
+var _flatrapp$shell$Helpers_User$ListUsersUnauthorizedError = {ctor: 'ListUsersUnauthorizedError'};
+var _flatrapp$shell$Helpers_User$listUsersErrorDecoder = _flatrapp$shell$Helpers_Functions$errorDecoder(
+	F2(
+		function (code, message) {
+			return _flatrapp$shell$Helpers_User$ListUsersErrorResponse(
+				{
+					error: function () {
+						var _p1 = code;
+						if (_p1 === 'unauthorized') {
+							return _flatrapp$shell$Helpers_User$ListUsersUnauthorizedError;
+						} else {
+							return _flatrapp$shell$Helpers_User$ListUsersUnknownError(_p1);
+						}
+					}(),
+					message: message
+				});
+		}));
+var _flatrapp$shell$Helpers_User$listUsersResponseDecode = function (res) {
+	return A4(_flatrapp$shell$Helpers_Functions$responseDecode, _flatrapp$shell$Helpers_User$listUsersErrorDecoder, _flatrapp$shell$Helpers_User$ListUsersInvalidResponse, _flatrapp$shell$Helpers_User$ListUsersHttpError, res);
 };
 
 var _flatrapp$shell$Components_Dashboard$loadingScreen = A2(
